@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import itertools
-
 PREAMBLE_LENGTH = 5
 
 #INVALID = 127
