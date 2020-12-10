@@ -9,15 +9,15 @@ Part 1
 #		if a + b  == 2020:
 #			print(f'{a} x {b} = {a*b}')
 #			exit()
-				
+
 """
 Part 2
 """
-				
+
 for a in numbers:
-	for b in numbers:
-		for c in numbers:
-			if a + b + c == 2020:
-				print(f'{a} x {b} x {c} = {a*b*c}')
-				exit()
-				
+  for b in numbers:
+    for c in numbers:
+      if a + b + c == 2020:
+        print(f'{a} x {b} x {c} = {a*b*c}')
+        exit()
+        

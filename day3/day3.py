@@ -12,15 +12,15 @@ width = len(rows[0])
 trees = [0,0,0,0,0]
 
 for option in range(5):
-	pos = 0
-	
-	for row in rows[::DROP[option]]:
-		if row[pos] == TREE:
-			trees[option] += 1
-		pos = (pos + ACROSS[option]) % width
-	
-	print(f'For option {option}, {trees[option]} trees encountered')
-	
+  pos = 0
+  
+  for row in rows[::DROP[option]]:
+    if row[pos] == TREE:
+      trees[option] += 1
+    pos = (pos + ACROSS[option]) % width
+    
+  print(f'For option {option}, {trees[option]} trees encountered')
+  
 print(f'Product: {prod(trees)}')
 
 
