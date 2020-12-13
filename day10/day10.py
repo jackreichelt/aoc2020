@@ -25,6 +25,7 @@ def part1(adaptors):
   
 diffZeroes = {x: 0 for x in adaptors}
 
+
 def diffZeroCalc(num):
   variants = 0
   for lower in range(num-3, num):
