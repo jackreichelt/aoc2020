@@ -63,4 +63,5 @@ def part2():
         memory[address] = int(value)
   print(sum(memory.values()))
 
+part1()
 part2()
