@@ -3,7 +3,7 @@ from math import prod
 
 def evaluate(ex):
   ex = doParentheses(ex)
-  ex = doAdditionThenMultiplication(ex)
+  ex = doOperations(ex)
   return str(ex)
 
 def doParentheses(ex):
@@ -41,12 +41,24 @@ def doParentheses(ex):
     
   return outEx
     
-def doAdditionThenMultiplication(ex):
-  mults = []
-  sections = [x.split(' + ') for x in ex.split(' * ')]
-  for section in sections:
-    mults.append(sum([int(x) for x in section]))
-  return prod(mults)
+def doOperations(ex):
+  PLUS = '+'
+  MULT = '*'
+  
+  total = 0
+  op = PLUS
+  tokens = ex.split(' ')
+  
+  for token in tokens:
+    if token in [PLUS, MULT]:
+      op = token
+    else:
+      if op == PLUS:
+        total += int(token)
+      else:
+        total *= int(token)
+  
+  return total
   
 expressions = [x.strip() for x in open('input.txt').readlines()]
 counts = [int(evaluate(ex)) for ex in expressions]
