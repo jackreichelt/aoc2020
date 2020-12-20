@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-from math import prod
-
 def evaluate(ex):
   ex = doParentheses(ex)
   ex = doOperations(ex)
